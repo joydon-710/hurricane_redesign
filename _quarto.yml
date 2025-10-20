@@ -1,0 +1,26 @@
+project:
+  type: website
+
+website:
+  title: "Hurricane Landfall Visualization Redesign"
+  description: "STAT 515 Redesign Project - International Hurricane Landfalls 1946-2023"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: analysis.qmd
+        text: Redesign Analysis
+      - href: code.qmd
+        text: R Code
+      - href: video.qmd
+        text: Video Presentation
+      - href: about.qmd
+        text: About
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+
+editor: visual

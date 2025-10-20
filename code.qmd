@@ -1,0 +1,339 @@
+---
+title: "R Code Implementation"
+---
+
+## Complete Analysis Code
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Load required packages
+library(dplyr)
+library(lubridate)
+library(ggplot2)
+library(maps)
+library(forcats)
+library(viridis)
+library(leaflet)
+library(GGally)
+library(plotly)
+library(RColorBrewer)
+library(gridExtra)
+library(ggridges)
+library(tidyr)
+library(ggExtra)
+
+# Read the data skipping the first comment line
+df <- read.csv("Intl_HurrData.csv", 
+               skip = 1, 
+               header = TRUE, 
+               stringsAsFactors = FALSE)
+
+# Data cleaning and preparation
+df_clean <- df %>%
+  mutate(
+    # Extract numeric values from Latitude/Longitude
+    Latitude_num = as.numeric(gsub("[^0-9.-]", "", Latitude)),
+    Longitude_num = -as.numeric(gsub("[^0-9.-]", "", Longitude)),
+    
+    # Convert other numeric columns
+    MaxWinds = as.numeric(MaxWinds),
+    SSHWS = as.numeric(SSHWS),
+    CentralPressure = as.numeric(ifelse(CentralPressure == "---", NA, CentralPressure)),
+    
+    # Convert Date (try different formats if needed)
+    Date_clean = as.Date(Date, format = "%m/%d/%y"),
+    
+    # Handle character columns
+    LandfallCountry = ifelse(LandfallCountry == "---", NA, LandfallCountry),
+    StormName = ifelse(StormName == "---", NA, StormName)
+  )
+
+# Fix the date century issue (1946 instead of 2046)
+df_clean <- df_clean %>%
+  mutate(
+    Date_clean = as.Date(Date, format = "%m/%d/%y"),
+    # Correct the century - if year > 2024, subtract 100 years
+    Date_clean = if_else(year(Date_clean) > 2024, 
+                         Date_clean - years(100), 
+                         Date_clean),
+    Year = year(Date_clean),
+    Month = month(Date_clean, label = TRUE),
+    Decade = floor(Year / 10) * 10,
+    Category = case_when(
+      SSHWS == 1 ~ "Category 1",
+      SSHWS == 2 ~ "Category 2", 
+      SSHWS == 3 ~ "Category 3",
+      SSHWS == 4 ~ "Category 4",
+      SSHWS == 5 ~ "Category 5"
+    )
+  )
+
+# Display data summary
+cat("=== DATA SUMMARY ===\n")
+cat("Time period:", min(df_clean$Year, na.rm = TRUE), "-", max(df_clean$Year, na.rm = TRUE), "\n")
+cat("Total landfall records:", nrow(df_clean), "\n")
+cat("Unique storms:", length(unique(na.omit(df_clean$StormName))), "\n")
+cat("Countries affected:", length(unique(na.omit(df_clean$LandfallCountry))), "\n")
+cat("Major hurricanes (Cat 4-5):", sum(df_clean$SSHWS >= 4, na.rm = TRUE), "\n\n")
+
+```
+
+## Redesign 1: Temporal Trends Analysis
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prepare annual trends data
+annual_trends <- df_clean %>%
+  group_by(Year) %>%
+  summarise(
+    hurricane_count = n(),
+    major_hurricanes = sum(SSHWS >= 4, na.rm = TRUE),
+    avg_pressure = mean(CentralPressure, na.rm = TRUE),
+    .groups = 'drop'
+  )
+
+# Create temporal trends visualization
+p_redesign1 <- ggplot(annual_trends, aes(x = Year, y = hurricane_count)) +
+  geom_line(color = "steelblue", alpha = 0.7) +
+  geom_point(color = "steelblue", size = 1) +
+  geom_smooth(method = "loess", se = TRUE, color = "darkred", fill = "pink", alpha = 0.3) +
+  geom_rect(aes(xmin = 1946, xmax = 1970, ymin = 0, ymax = max(hurricane_count)*1.1), 
+            fill = "lightblue", alpha = 0.05) +
+  geom_rect(aes(xmin = 1983, xmax = 2023, ymin = 0, ymax = max(hurricane_count)*1.1), 
+            fill = "lightgreen", alpha = 0.05) +
+  annotate("text", x = 1958, y = max(annual_trends$hurricane_count)*0.9, 
+           label = "1946-1970", size = 3, color = "darkblue") +
+  annotate("text", x = 2003, y = max(annual_trends$hurricane_count)*0.9, 
+           label = "1983-2023", size = 3, color = "darkgreen") +
+  labs(title = "Redesign 1: Hurricane Landfalls by Year with Temporal Trends",
+       subtitle = "LOESS smoothing reveals long-term patterns and highlights data collection periods",
+       x = "Year", y = "Number of Hurricane Landfalls",
+       caption = "Shaded areas represent different data collection periods") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"),
+        panel.grid.minor = element_blank())
+
+print(p_redesign1)
+
+# Save the visualization
+ggsave("redesign1_temporal.png", p_redesign1, width = 12, height = 8, dpi = 300)
+```
+
+## Redesign 2: Spatial Distribution Map
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prepare world map data
+world_map <- map_data("world")
+
+# Prepare spatial data
+spatial_data <- df_clean %>%
+  filter(!is.na(Latitude_num) & !is.na(Longitude_num)) %>%
+  mutate(
+    intensity_group = cut(SSHWS, 
+                         breaks = c(0, 1, 2, 3, 4, 5),
+                         labels = c("Cat 1", "Cat 2", "Cat 3", "Cat 4", "Cat 5"),
+                         include.lowest = TRUE)
+  )
+
+# Create enhanced spatial map
+p_redesign2 <- ggplot() +
+  geom_polygon(data = world_map, aes(x = long, y = lat, group = group), 
+               fill = "lightgray", color = "white", alpha = 0.8) +
+  geom_point(data = spatial_data, 
+             aes(x = Longitude_num, y = Latitude_num, 
+                 size = MaxWinds, color = intensity_group),
+             alpha = 0.7) +
+  scale_color_manual(values = c("Cat 1" = "blue", "Cat 2" = "green", 
+                                "Cat 3" = "yellow", "Cat 4" = "orange", 
+                                "Cat 5" = "red")) +
+  scale_size_continuous(range = c(1, 6), name = "Max Winds (kts)") +
+  coord_cartesian(xlim = c(-100, -60), ylim = c(10, 50)) +
+  labs(title = "Redesign 2: Enhanced Hurricane Landfall Map",
+       subtitle = "Point size = Maximum winds, Color = Saffir-Simpson Category",
+       x = "Longitude", y = "Latitude", color = "Category") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+
+print(p_redesign2)
+
+# Save the visualization
+ggsave("redesign2_spatial.png", p_redesign2, width = 12, height = 8, dpi = 300)
+```
+
+## Redesign 3: Country Impact Assessment
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prepare country impact data
+country_impact <- df_clean %>%
+  filter(!is.na(LandfallCountry)) %>%
+  group_by(LandfallCountry) %>%
+  summarise(
+    total_landfalls = n(),
+    avg_intensity = mean(SSHWS, na.rm = TRUE),
+    max_intensity = max(SSHWS, na.rm = TRUE),
+    major_hurricanes = sum(SSHWS >= 4, na.rm = TRUE),
+    .groups = 'drop'
+  ) %>%
+  filter(total_landfalls >= 3) %>%  # Only countries with multiple landfalls
+  arrange(desc(total_landfalls))
+
+# Create country impact visualization
+p_redesign3 <- ggplot(country_impact, 
+                       aes(x = total_landfalls, 
+                           y = fct_reorder(LandfallCountry, total_landfalls))) +
+  geom_point(aes(size = major_hurricanes, color = avg_intensity), alpha = 0.8) +
+  geom_segment(aes(xend = 0, yend = LandfallCountry), alpha = 0.5) +
+  scale_color_viridis(name = "Avg Category", option = "inferno", 
+                      limits = c(1, 5), breaks = 1:5) +
+  scale_size_continuous(name = "Major Hurricanes", range = c(2, 8)) +
+  labs(title = "Redesign 3: Country Impact Analysis",
+       subtitle = "Position = Total landfalls, Color = Average intensity, Size = Major hurricanes (Cat 4-5)",
+       x = "Total Hurricane Landfalls", y = "Country") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"),
+        panel.grid.major.y = element_blank())
+
+print(p_redesign3)
+
+# Save the visualization
+ggsave("redesign3_country.png", p_redesign3, width = 12, height = 8, dpi = 300)
+
+# Display top affected countries
+cat("Top 5 Most Affected Countries:\n")
+top_countries <- country_impact %>% head(5)
+print(top_countries)
+```
+
+## Redesign 4: Intensity Relationships
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Prepare data for intensity analysis
+storm_analysis <- df_clean %>%
+  filter(!is.na(MaxWinds) & !is.na(CentralPressure) & !is.na(SSHWS)) %>%
+  mutate(Category = as.factor(SSHWS))
+
+# Create base scatterplot
+p_redesign4_base <- ggplot(storm_analysis, aes(x = CentralPressure, y = MaxWinds)) +
+  geom_point(aes(color = Category), alpha = 0.7, size = 2) +
+  geom_smooth(method = "lm", se = TRUE, color = "black", alpha = 0.3) +
+  scale_color_manual(values = c("1" = "blue", "2" = "green", "3" = "yellow", 
+                                "4" = "orange", "5" = "red")) +
+  labs(title = "Redesign 4: Hurricane Intensity Relationships",
+       subtitle = "Pressure-Wind relationship with marginal distributions",
+       x = "Central Pressure (mb)", y = "Maximum Winds (knots)") +
+  theme_minimal() +
+  theme(plot.title = element_text(face = "bold"))
+
+# Add marginal distributions
+p_redesign4 <- ggMarginal(p_redesign4_base, type = "density", 
+                         fill = "lightblue", alpha = 0.7)
+
+print(p_redesign4)
+
+# Save the visualization
+ggsave("redesign4_intensity.png", p_redesign4, width = 12, height = 8, dpi = 300)
+
+# Display correlation statistics
+correlation <- cor(storm_analysis$CentralPressure, storm_analysis$MaxWinds, 
+                   use = "complete.obs")
+cat("Pressure-Wind Correlation:", round(correlation, 3), "\n")
+```
+
+## Summary Statistics
+
+```{r}
+#| echo: true
+#| warning: false
+#| message: false
+
+# Generate comprehensive summary statistics
+cat("=== COMPREHENSIVE DATA SUMMARY ===\n\n")
+
+# Basic statistics
+cat("DATA OVERVIEW:\n")
+cat("Total records:", nrow(df_clean), "\n")
+cat("Date range:", min(df_clean$Year, na.rm = TRUE), "to", max(df_clean$Year, na.rm = TRUE), "\n")
+cat("Countries affected:", length(unique(na.omit(df_clean$LandfallCountry))), "\n")
+cat("Unique storm names:", length(unique(na.omit(df_clean$StormName))), "\n\n")
+
+# Intensity distribution
+cat("INTENSITY DISTRIBUTION:\n")
+intensity_summary <- df_clean %>%
+  filter(!is.na(SSHWS)) %>%
+  group_by(SSHWS) %>%
+  summarise(
+    Count = n(),
+    Percentage = round(n() / nrow(df_clean) * 100, 1),
+    Avg_MaxWinds = round(mean(MaxWinds, na.rm = TRUE), 1),
+    Avg_Pressure = round(mean(CentralPressure, na.rm = TRUE), 1),
+    .groups = 'drop'
+  )
+print(intensity_summary)
+cat("\n")
+
+# Most active years
+cat("TOP 5 MOST ACTIVE YEARS:\n")
+active_years <- df_clean %>%
+  group_by(Year) %>%
+  summarise(Landfalls = n(), .groups = 'drop') %>%
+  arrange(desc(Landfalls)) %>%
+  head(5)
+print(active_years)
+cat("\n")
+
+# Country statistics
+cat("COUNTRY IMPACT SUMMARY:\n")
+country_stats <- df_clean %>%
+  filter(!is.na(LandfallCountry)) %>%
+  group_by(LandfallCountry) %>%
+  summarise(
+    Landfalls = n(),
+    Major_Hurricanes = sum(SSHWS >= 4, na.rm = TRUE),
+    Avg_Category = round(mean(SSHWS, na.rm = TRUE), 2),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(Landfalls)) %>%
+  head(10)
+print(country_stats)
+
+cat("\n=== ANALYSIS COMPLETE ===\n")
+```
+
+## Package Dependencies
+
+- **ggplot2**: Primary visualization system
+- **dplyr**: Data manipulation and transformation
+- **lubridate**: Date handling and processing
+- **maps**: Geographic map data
+- **viridis**: Color-blind friendly color schemes
+- **ggExtra**: Marginal distribution plots
+- **gridExtra**: Multi-plot arrangements
+- **tidyr**: Data tidying functions
+
+## Code Structure
+
+1. **Data Import & Cleaning**: Reading CSV, handling missing values, date correction
+2. **Data Transformation**: Creating derived variables, grouping, summarization
+3. **Visualization Creation**: Four distinct redesigns using ggplot2
+4. **Statistical Analysis**: Correlation, distributions, and summary statistics
+5. **Output Generation**: Saving high-quality PNG files
+
+*Note: This code requires the `Intl_HurrData.csv` file to be in the working directory.*

@@ -1,0 +1,22 @@
+---
+title: "Hurricane Landfall Visualization Redesign"
+---
+
+## Project Overview
+
+This project redesigns NOAA's International Atlantic Hurricane Landfalls data table (1946-2023) to demonstrate effective data visualization principles for STAT 515.
+
+![Temporal Trends](redesign1_temporal.png){width="90%"}
+
+### Project Components
+
+-   **Original Visualization**: NOAA hurricane landfall data table
+-   **4 Redesigns**: Temporal, spatial, categorical, and relational analyses
+-   **Tools**: R, ggplot2, Quarto
+-   **Course**: STAT 515 - Applied Statistics and Visualization for Analytics
+
+### Quick Navigation
+
+-   **Redesign Analysis**: Detailed breakdown of all visualizations
+-   **R Code**: Complete implementation code
+-   **Video Presentation**: 10-minute project overview

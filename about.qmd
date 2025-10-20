@@ -1,0 +1,37 @@
+---
+title: "About This Project"
+---
+
+## Project Details
+
+**Course**: STAT 515 - Applied Statistics and Visualization for Analytics  
+**Institution**: George Mason University  
+**Date**: Fall 2025  
+
+
+## Data Source
+
+NOAA International Best Track Archive for Climate Stewardship (IBTrACS)  
+International Atlantic Hurricane Landfalls, 1946-2023
+
+## Tools & Technologies
+
+- **R**: Data analysis and visualization
+- **ggplot2**: Statistical graphics
+- **Quarto**: Website generation
+- **GitHub**: Version control and hosting
+
+## Design Principles Applied
+
+1. Enable accurate comparisons
+2. Simplify appearance
+3. Provide context for interpretation
+4. Attract and engage the reader
+
+## Submission Requirements Met
+
+- ✅ Website with project content
+- ✅ GitHub repository with code
+- ✅ 10-minute video presentation
+- ✅ 4+ visualization redesigns
+- ✅ Comparative analysis

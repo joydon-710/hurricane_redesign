@@ -1,0 +1,41 @@
+---
+title: "Redesign Analysis"
+---
+
+## Original Visualization Critique
+
+The original data table from NOAA contains detailed hurricane landfall records but suffers from several visualization limitations.
+
+**Key Issues:** - Poor pattern recognition in 200+ rows of data - No visual encoding for rapid insight generation - Difficult to compare across time, space, or intensity - Cognitive overload from dense tabular format
+
+## Redesign 1: Temporal Trends
+
+![Temporal Analysis](redesign1_temporal.png)
+
+**Improvements:** - Time series reveals long-term patterns - LOESS smoothing shows underlying trends - Clear visualization of data collection periods
+
+**Insights:** - High year-to-year variability in landfall frequency - No obvious long-term increasing trend - Clear gap in 1971-1982 data collection
+
+## Redesign 2: Spatial Distribution
+
+![Spatial Analysis](redesign2_spatial.png)
+
+**Improvements:** - Geographic mapping of landfall locations - Dual encoding (size = wind speed, color = category) - Regional context with map background
+
+**Insights:** - Caribbean islands are hurricane hotspots - Major storms concentrate in western Caribbean - Geographic patterns in storm intensity
+
+## Redesign 3: Country Impact
+
+![Country Impact](redesign3_country.png)
+
+**Improvements:** - Triple encoding (position + color + size) - Ranked country comparison - Multidimensional risk assessment
+
+**Insights:** - Mexico experiences most frequent landfalls - Small islands face disproportionate impact - Variation in storm severity by country
+
+## Redesign 4: Intensity Relationships
+
+![Intensity Analysis](redesign4_intensity.png)
+
+**Improvements:** - Pressure-wind relationship visualization - Marginal distributions for context - Statistical trend analysis
+
+**Insights:** - Strong inverse pressure-wind correlation - Clear separation between intensity categories - Meteorological consistency in data
