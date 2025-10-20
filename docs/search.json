@@ -18,7 +18,7 @@
     "href": "Video.html",
     "title": "Video",
     "section": "",
-    "text": "Problem: Understanding long-term patterns in international hurricane landfalls\nData: NOAA International Hurricane Data (1946-2023)\nGoal: Redesign visualizations for better insight and communication\n\n\n\n\n1. Temporal Trends Analysis - LOESS smoothing reveals long-term patterns - Highlights different data collection periods - Shows hurricane frequency over time\n2. Enhanced Spatial Mapping - Geographic distribution of landfalls - Point size = Maximum wind speed - Color coding = Saffir-Simpson category\n3. Country Impact Assessment - Multi-dimensional bubble chart - Position = Total landfalls - Color = Average intensity\n- Size = Major hurricanes (Category 4-5)\n4. Intensity Relationships - Wind speed vs central pressure correlation - Physical relationships in hurricane intensity - Category-based analysis\n\n\n\n\nIdentification of hurricane frequency patterns over time\nGeographic hotspots and regional vulnerabilities\nCountry-level impact assessment\nIntensity relationship insights\n\n\n\n\n\nTools: R, ggplot2, Quarto\nMethods: Statistical visualization, LOESS smoothing, spatial analysis\nOutput: Reproducible research website\n\n\n\n\n\n\nData Source: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nCode Repository: [GitHub Repository Link]\nFull Analysis: See the “Redesign Analysis” page for detailed visualizations"
+    "text": "Problem: Understanding long-term patterns in international hurricane landfalls\nData: NOAA International Hurricane Data (1946-2023)\nGoal: Redesign visualizations for better insight and communication\n\n\n\n\n1. Temporal Trends Analysis - LOESS smoothing reveals long-term patterns - Highlights different data collection periods - Shows hurricane frequency over time\n2. Enhanced Spatial Mapping - Geographic distribution of landfalls - Point size = Maximum wind speed - Color coding = Saffir-Simpson category\n3. Country Impact Assessment - Multi-dimensional bubble chart - Position = Total landfalls - Color = Average intensity\n- Size = Major hurricanes (Category 4-5)\n4. Intensity Relationships - Wind speed vs central pressure correlation - Physical relationships in hurricane intensity - Category-based analysis\n\n\n\n\nIdentification of hurricane frequency patterns over time\nGeographic hotspots and regional vulnerabilities\nCountry-level impact assessment\nIntensity relationship insights\n\n\n\n\n\nTools: R, ggplot2, Quarto\nMethods: Statistical visualization, LOESS smoothing, spatial analysis\nOutput: Reproducible research website\n\n\n\n\n\n\nData Source: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nCode Repository: https://github.com/joydon-710/hurricane_redesign\nFull Analysis: See the “Redesign Analysis” page for detailed visualizations"
   },
   {
     "objectID": "Video.html#presentation-overview",
@@ -32,7 +32,7 @@
     "href": "Video.html#project-resources",
     "title": "Video",
     "section": "",
-    "text": "Data Source: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nCode Repository: [GitHub Repository Link]\nFull Analysis: See the “Redesign Analysis” page for detailed visualizations"
+    "text": "Data Source: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nCode Repository: https://github.com/joydon-710/hurricane_redesign\nFull Analysis: See the “Redesign Analysis” page for detailed visualizations"
   },
   {
     "objectID": "analysis.html",
