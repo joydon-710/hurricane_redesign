@@ -319,21 +319,21 @@ cat("\n=== ANALYSIS COMPLETE ===\n")
 
 ## Package Dependencies
 
-- **ggplot2**: Primary visualization system
-- **dplyr**: Data manipulation and transformation
-- **lubridate**: Date handling and processing
-- **maps**: Geographic map data
-- **viridis**: Color-blind friendly color schemes
-- **ggExtra**: Marginal distribution plots
-- **gridExtra**: Multi-plot arrangements
-- **tidyr**: Data tidying functions
+-   **ggplot2**: Primary visualization system
+-   **dplyr**: Data manipulation and transformation
+-   **lubridate**: Date handling and processing
+-   **maps**: Geographic map data
+-   **viridis**: Color-blind friendly color schemes
+-   **ggExtra**: Marginal distribution plots
+-   **gridExtra**: Multi-plot arrangements
+-   **tidyr**: Data tidying functions
 
 ## Code Structure
 
-1. **Data Import & Cleaning**: Reading CSV, handling missing values, date correction
-2. **Data Transformation**: Creating derived variables, grouping, summarization
-3. **Visualization Creation**: Four distinct redesigns using ggplot2
-4. **Statistical Analysis**: Correlation, distributions, and summary statistics
-5. **Output Generation**: Saving high-quality PNG files
+1.  **Data Import & Cleaning**: Reading CSV, handling missing values, date correction
+2.  **Data Transformation**: Creating derived variables, grouping, summarization
+3.  **Visualization Creation**: Four distinct redesigns using ggplot2
+4.  **Statistical Analysis**: Correlation, distributions, and summary statistics
+5.  **Output Generation**: Saving high-quality PNG files
 
 *Note: This code requires the `Intl_HurrData.csv` file to be in the working directory.*

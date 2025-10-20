@@ -1,0 +1,177 @@
+[
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About This Project",
+    "section": "",
+    "text": "Course: STAT 515 - Applied Statistics and Visualization for Analytics\nInstitution: George Mason University\nDate: Fall 2025"
+  },
+  {
+    "objectID": "about.html#project-details",
+    "href": "about.html#project-details",
+    "title": "About This Project",
+    "section": "",
+    "text": "Course: STAT 515 - Applied Statistics and Visualization for Analytics\nInstitution: George Mason University\nDate: Fall 2025"
+  },
+  {
+    "objectID": "about.html#data-source",
+    "href": "about.html#data-source",
+    "title": "About This Project",
+    "section": "Data Source",
+    "text": "Data Source\nNOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nInternational Atlantic Hurricane Landfalls, 1946-2023"
+  },
+  {
+    "objectID": "about.html#tools-technologies",
+    "href": "about.html#tools-technologies",
+    "title": "About This Project",
+    "section": "Tools & Technologies",
+    "text": "Tools & Technologies\n\nR: Data analysis and visualization\nggplot2: Statistical graphics\nQuarto: Website generation\nGitHub: Version control and hosting"
+  },
+  {
+    "objectID": "about.html#design-principles-applied",
+    "href": "about.html#design-principles-applied",
+    "title": "About This Project",
+    "section": "Design Principles Applied",
+    "text": "Design Principles Applied\n\nEnable accurate comparisons\nSimplify appearance\nProvide context for interpretation\nAttract and engage the reader"
+  },
+  {
+    "objectID": "Video.html",
+    "href": "Video.html",
+    "title": "Video",
+    "section": "",
+    "text": "Problem: Understanding long-term patterns in international hurricane landfalls\nData: NOAA International Hurricane Data (1946-2023)\nGoal: Redesign visualizations for better insight and communication\n\n\n\n\n1. Temporal Trends Analysis - LOESS smoothing reveals long-term patterns - Highlights different data collection periods - Shows hurricane frequency over time\n2. Enhanced Spatial Mapping - Geographic distribution of landfalls - Point size = Maximum wind speed - Color coding = Saffir-Simpson category\n3. Country Impact Assessment - Multi-dimensional bubble chart - Position = Total landfalls - Color = Average intensity\n- Size = Major hurricanes (Category 4-5)\n4. Intensity Relationships - Wind speed vs central pressure correlation - Physical relationships in hurricane intensity - Category-based analysis\n\n\n\n\nIdentification of hurricane frequency patterns over time\nGeographic hotspots and regional vulnerabilities\nCountry-level impact assessment\nIntensity relationship insights\n\n\n\n\n\nTools: R, ggplot2, Quarto\nMethods: Statistical visualization, LOESS smoothing, spatial analysis\nOutput: Reproducible research website\n\n\n\n\n\n\nData Source: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nCode Repository: [GitHub Repository Link]\nFull Analysis: See the “Redesign Analysis” page for detailed visualizations"
+  },
+  {
+    "objectID": "Video.html#presentation-overview",
+    "href": "Video.html#presentation-overview",
+    "title": "Video",
+    "section": "",
+    "text": "Problem: Understanding long-term patterns in international hurricane landfalls\nData: NOAA International Hurricane Data (1946-2023)\nGoal: Redesign visualizations for better insight and communication\n\n\n\n\n1. Temporal Trends Analysis - LOESS smoothing reveals long-term patterns - Highlights different data collection periods - Shows hurricane frequency over time\n2. Enhanced Spatial Mapping - Geographic distribution of landfalls - Point size = Maximum wind speed - Color coding = Saffir-Simpson category\n3. Country Impact Assessment - Multi-dimensional bubble chart - Position = Total landfalls - Color = Average intensity\n- Size = Major hurricanes (Category 4-5)\n4. Intensity Relationships - Wind speed vs central pressure correlation - Physical relationships in hurricane intensity - Category-based analysis\n\n\n\n\nIdentification of hurricane frequency patterns over time\nGeographic hotspots and regional vulnerabilities\nCountry-level impact assessment\nIntensity relationship insights\n\n\n\n\n\nTools: R, ggplot2, Quarto\nMethods: Statistical visualization, LOESS smoothing, spatial analysis\nOutput: Reproducible research website"
+  },
+  {
+    "objectID": "Video.html#project-resources",
+    "href": "Video.html#project-resources",
+    "title": "Video",
+    "section": "",
+    "text": "Data Source: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\nCode Repository: [GitHub Repository Link]\nFull Analysis: See the “Redesign Analysis” page for detailed visualizations"
+  },
+  {
+    "objectID": "analysis.html",
+    "href": "analysis.html",
+    "title": "Redesign Analysis",
+    "section": "",
+    "text": "The original data table from NOAA contains detailed hurricane landfall records but suffers from several visualization limitations.\nKey Issues: - Poor pattern recognition in 200+ rows of data - No visual encoding for rapid insight generation - Difficult to compare across time, space, or intensity - Cognitive overload from dense tabular format"
+  },
+  {
+    "objectID": "analysis.html#original-visualization-critique",
+    "href": "analysis.html#original-visualization-critique",
+    "title": "Redesign Analysis",
+    "section": "",
+    "text": "The original data table from NOAA contains detailed hurricane landfall records but suffers from several visualization limitations.\nKey Issues: - Poor pattern recognition in 200+ rows of data - No visual encoding for rapid insight generation - Difficult to compare across time, space, or intensity - Cognitive overload from dense tabular format"
+  },
+  {
+    "objectID": "analysis.html#redesign-1-temporal-trends",
+    "href": "analysis.html#redesign-1-temporal-trends",
+    "title": "Redesign Analysis",
+    "section": "Redesign 1: Temporal Trends",
+    "text": "Redesign 1: Temporal Trends\n\n\n\nTemporal Analysis\n\n\nImprovements: - Time series reveals long-term patterns - LOESS smoothing shows underlying trends - Clear visualization of data collection periods\nInsights: - High year-to-year variability in landfall frequency - No obvious long-term increasing trend - Clear gap in 1971-1982 data collection"
+  },
+  {
+    "objectID": "analysis.html#redesign-2-spatial-distribution",
+    "href": "analysis.html#redesign-2-spatial-distribution",
+    "title": "Redesign Analysis",
+    "section": "Redesign 2: Spatial Distribution",
+    "text": "Redesign 2: Spatial Distribution\n\n\n\nSpatial Analysis\n\n\nImprovements: - Geographic mapping of landfall locations - Dual encoding (size = wind speed, color = category) - Regional context with map background\nInsights: - Caribbean islands are hurricane hotspots - Major storms concentrate in western Caribbean - Geographic patterns in storm intensity"
+  },
+  {
+    "objectID": "analysis.html#redesign-3-country-impact",
+    "href": "analysis.html#redesign-3-country-impact",
+    "title": "Redesign Analysis",
+    "section": "Redesign 3: Country Impact",
+    "text": "Redesign 3: Country Impact\n\n\n\nCountry Impact\n\n\nImprovements: - Triple encoding (position + color + size) - Ranked country comparison - Multidimensional risk assessment\nInsights: - Mexico experiences most frequent landfalls - Small islands face disproportionate impact - Variation in storm severity by country"
+  },
+  {
+    "objectID": "analysis.html#redesign-4-intensity-relationships",
+    "href": "analysis.html#redesign-4-intensity-relationships",
+    "title": "Redesign Analysis",
+    "section": "Redesign 4: Intensity Relationships",
+    "text": "Redesign 4: Intensity Relationships\n\n\n\nIntensity Analysis\n\n\nImprovements: - Pressure-wind relationship visualization - Marginal distributions for context - Statistical trend analysis\nInsights: - Strong inverse pressure-wind correlation - Clear separation between intensity categories - Meteorological consistency in data"
+  },
+  {
+    "objectID": "code.html",
+    "href": "code.html",
+    "title": "R Code Implementation",
+    "section": "",
+    "text": "# Load required packages\nlibrary(dplyr)\nlibrary(lubridate)\nlibrary(ggplot2)\nlibrary(maps)\nlibrary(forcats)\nlibrary(viridis)\nlibrary(leaflet)\nlibrary(GGally)\nlibrary(plotly)\nlibrary(RColorBrewer)\nlibrary(gridExtra)\nlibrary(ggridges)\nlibrary(tidyr)\nlibrary(ggExtra)\n\n# Read the data skipping the first comment line\ndf &lt;- read.csv(\"Intl_HurrData.csv\", \n               skip = 1, \n               header = TRUE, \n               stringsAsFactors = FALSE)\n\n# Data cleaning and preparation\ndf_clean &lt;- df %&gt;%\n  mutate(\n    # Extract numeric values from Latitude/Longitude\n    Latitude_num = as.numeric(gsub(\"[^0-9.-]\", \"\", Latitude)),\n    Longitude_num = -as.numeric(gsub(\"[^0-9.-]\", \"\", Longitude)),\n    \n    # Convert other numeric columns\n    MaxWinds = as.numeric(MaxWinds),\n    SSHWS = as.numeric(SSHWS),\n    CentralPressure = as.numeric(ifelse(CentralPressure == \"---\", NA, CentralPressure)),\n    \n    # Convert Date (try different formats if needed)\n    Date_clean = as.Date(Date, format = \"%m/%d/%y\"),\n    \n    # Handle character columns\n    LandfallCountry = ifelse(LandfallCountry == \"---\", NA, LandfallCountry),\n    StormName = ifelse(StormName == \"---\", NA, StormName)\n  )\n\n# Fix the date century issue (1946 instead of 2046)\ndf_clean &lt;- df_clean %&gt;%\n  mutate(\n    Date_clean = as.Date(Date, format = \"%m/%d/%y\"),\n    # Correct the century - if year &gt; 2024, subtract 100 years\n    Date_clean = if_else(year(Date_clean) &gt; 2024, \n                         Date_clean - years(100), \n                         Date_clean),\n    Year = year(Date_clean),\n    Month = month(Date_clean, label = TRUE),\n    Decade = floor(Year / 10) * 10,\n    Category = case_when(\n      SSHWS == 1 ~ \"Category 1\",\n      SSHWS == 2 ~ \"Category 2\", \n      SSHWS == 3 ~ \"Category 3\",\n      SSHWS == 4 ~ \"Category 4\",\n      SSHWS == 5 ~ \"Category 5\"\n    )\n  )\n\n# Display data summary\ncat(\"=== DATA SUMMARY ===\\n\")\n\n=== DATA SUMMARY ===\n\ncat(\"Time period:\", min(df_clean$Year, na.rm = TRUE), \"-\", max(df_clean$Year, na.rm = TRUE), \"\\n\")\n\nTime period: 1946 - 2023 \n\ncat(\"Total landfall records:\", nrow(df_clean), \"\\n\")\n\nTotal landfall records: 232 \n\ncat(\"Unique storms:\", length(unique(na.omit(df_clean$StormName))), \"\\n\")\n\nUnique storms: 108 \n\ncat(\"Countries affected:\", length(unique(na.omit(df_clean$LandfallCountry))), \"\\n\")\n\nCountries affected: 33 \n\ncat(\"Major hurricanes (Cat 4-5):\", sum(df_clean$SSHWS &gt;= 4, na.rm = TRUE), \"\\n\\n\")\n\nMajor hurricanes (Cat 4-5): 46"
+  },
+  {
+    "objectID": "code.html#complete-analysis-code",
+    "href": "code.html#complete-analysis-code",
+    "title": "R Code Implementation",
+    "section": "",
+    "text": "# Load required packages\nlibrary(dplyr)\nlibrary(lubridate)\nlibrary(ggplot2)\nlibrary(maps)\nlibrary(forcats)\nlibrary(viridis)\nlibrary(leaflet)\nlibrary(GGally)\nlibrary(plotly)\nlibrary(RColorBrewer)\nlibrary(gridExtra)\nlibrary(ggridges)\nlibrary(tidyr)\nlibrary(ggExtra)\n\n# Read the data skipping the first comment line\ndf &lt;- read.csv(\"Intl_HurrData.csv\", \n               skip = 1, \n               header = TRUE, \n               stringsAsFactors = FALSE)\n\n# Data cleaning and preparation\ndf_clean &lt;- df %&gt;%\n  mutate(\n    # Extract numeric values from Latitude/Longitude\n    Latitude_num = as.numeric(gsub(\"[^0-9.-]\", \"\", Latitude)),\n    Longitude_num = -as.numeric(gsub(\"[^0-9.-]\", \"\", Longitude)),\n    \n    # Convert other numeric columns\n    MaxWinds = as.numeric(MaxWinds),\n    SSHWS = as.numeric(SSHWS),\n    CentralPressure = as.numeric(ifelse(CentralPressure == \"---\", NA, CentralPressure)),\n    \n    # Convert Date (try different formats if needed)\n    Date_clean = as.Date(Date, format = \"%m/%d/%y\"),\n    \n    # Handle character columns\n    LandfallCountry = ifelse(LandfallCountry == \"---\", NA, LandfallCountry),\n    StormName = ifelse(StormName == \"---\", NA, StormName)\n  )\n\n# Fix the date century issue (1946 instead of 2046)\ndf_clean &lt;- df_clean %&gt;%\n  mutate(\n    Date_clean = as.Date(Date, format = \"%m/%d/%y\"),\n    # Correct the century - if year &gt; 2024, subtract 100 years\n    Date_clean = if_else(year(Date_clean) &gt; 2024, \n                         Date_clean - years(100), \n                         Date_clean),\n    Year = year(Date_clean),\n    Month = month(Date_clean, label = TRUE),\n    Decade = floor(Year / 10) * 10,\n    Category = case_when(\n      SSHWS == 1 ~ \"Category 1\",\n      SSHWS == 2 ~ \"Category 2\", \n      SSHWS == 3 ~ \"Category 3\",\n      SSHWS == 4 ~ \"Category 4\",\n      SSHWS == 5 ~ \"Category 5\"\n    )\n  )\n\n# Display data summary\ncat(\"=== DATA SUMMARY ===\\n\")\n\n=== DATA SUMMARY ===\n\ncat(\"Time period:\", min(df_clean$Year, na.rm = TRUE), \"-\", max(df_clean$Year, na.rm = TRUE), \"\\n\")\n\nTime period: 1946 - 2023 \n\ncat(\"Total landfall records:\", nrow(df_clean), \"\\n\")\n\nTotal landfall records: 232 \n\ncat(\"Unique storms:\", length(unique(na.omit(df_clean$StormName))), \"\\n\")\n\nUnique storms: 108 \n\ncat(\"Countries affected:\", length(unique(na.omit(df_clean$LandfallCountry))), \"\\n\")\n\nCountries affected: 33 \n\ncat(\"Major hurricanes (Cat 4-5):\", sum(df_clean$SSHWS &gt;= 4, na.rm = TRUE), \"\\n\\n\")\n\nMajor hurricanes (Cat 4-5): 46"
+  },
+  {
+    "objectID": "code.html#redesign-1-temporal-trends-analysis",
+    "href": "code.html#redesign-1-temporal-trends-analysis",
+    "title": "R Code Implementation",
+    "section": "Redesign 1: Temporal Trends Analysis",
+    "text": "Redesign 1: Temporal Trends Analysis\n\n# Prepare annual trends data\nannual_trends &lt;- df_clean %&gt;%\n  group_by(Year) %&gt;%\n  summarise(\n    hurricane_count = n(),\n    major_hurricanes = sum(SSHWS &gt;= 4, na.rm = TRUE),\n    avg_pressure = mean(CentralPressure, na.rm = TRUE),\n    .groups = 'drop'\n  )\n\n# Create temporal trends visualization\np_redesign1 &lt;- ggplot(annual_trends, aes(x = Year, y = hurricane_count)) +\n  geom_line(color = \"steelblue\", alpha = 0.7) +\n  geom_point(color = \"steelblue\", size = 1) +\n  geom_smooth(method = \"loess\", se = TRUE, color = \"darkred\", fill = \"pink\", alpha = 0.3) +\n  geom_rect(aes(xmin = 1946, xmax = 1970, ymin = 0, ymax = max(hurricane_count)*1.1), \n            fill = \"lightblue\", alpha = 0.05) +\n  geom_rect(aes(xmin = 1983, xmax = 2023, ymin = 0, ymax = max(hurricane_count)*1.1), \n            fill = \"lightgreen\", alpha = 0.05) +\n  annotate(\"text\", x = 1958, y = max(annual_trends$hurricane_count)*0.9, \n           label = \"1946-1970\", size = 3, color = \"darkblue\") +\n  annotate(\"text\", x = 2003, y = max(annual_trends$hurricane_count)*0.9, \n           label = \"1983-2023\", size = 3, color = \"darkgreen\") +\n  labs(title = \"Redesign 1: Hurricane Landfalls by Year with Temporal Trends\",\n       subtitle = \"LOESS smoothing reveals long-term patterns and highlights data collection periods\",\n       x = \"Year\", y = \"Number of Hurricane Landfalls\",\n       caption = \"Shaded areas represent different data collection periods\") +\n  theme_minimal() +\n  theme(plot.title = element_text(face = \"bold\"),\n        panel.grid.minor = element_blank())\n\nprint(p_redesign1)\n\n\n\n\n\n\n\n# Save the visualization\nggsave(\"redesign1_temporal.png\", p_redesign1, width = 12, height = 8, dpi = 300)"
+  },
+  {
+    "objectID": "code.html#redesign-2-spatial-distribution-map",
+    "href": "code.html#redesign-2-spatial-distribution-map",
+    "title": "R Code Implementation",
+    "section": "Redesign 2: Spatial Distribution Map",
+    "text": "Redesign 2: Spatial Distribution Map\n\n# Prepare world map data\nworld_map &lt;- map_data(\"world\")\n\n# Prepare spatial data\nspatial_data &lt;- df_clean %&gt;%\n  filter(!is.na(Latitude_num) & !is.na(Longitude_num)) %&gt;%\n  mutate(\n    intensity_group = cut(SSHWS, \n                         breaks = c(0, 1, 2, 3, 4, 5),\n                         labels = c(\"Cat 1\", \"Cat 2\", \"Cat 3\", \"Cat 4\", \"Cat 5\"),\n                         include.lowest = TRUE)\n  )\n\n# Create enhanced spatial map\np_redesign2 &lt;- ggplot() +\n  geom_polygon(data = world_map, aes(x = long, y = lat, group = group), \n               fill = \"lightgray\", color = \"white\", alpha = 0.8) +\n  geom_point(data = spatial_data, \n             aes(x = Longitude_num, y = Latitude_num, \n                 size = MaxWinds, color = intensity_group),\n             alpha = 0.7) +\n  scale_color_manual(values = c(\"Cat 1\" = \"blue\", \"Cat 2\" = \"green\", \n                                \"Cat 3\" = \"yellow\", \"Cat 4\" = \"orange\", \n                                \"Cat 5\" = \"red\")) +\n  scale_size_continuous(range = c(1, 6), name = \"Max Winds (kts)\") +\n  coord_cartesian(xlim = c(-100, -60), ylim = c(10, 50)) +\n  labs(title = \"Redesign 2: Enhanced Hurricane Landfall Map\",\n       subtitle = \"Point size = Maximum winds, Color = Saffir-Simpson Category\",\n       x = \"Longitude\", y = \"Latitude\", color = \"Category\") +\n  theme_minimal() +\n  theme(plot.title = element_text(face = \"bold\"))\n\nprint(p_redesign2)\n\n\n\n\n\n\n\n# Save the visualization\nggsave(\"redesign2_spatial.png\", p_redesign2, width = 12, height = 8, dpi = 300)"
+  },
+  {
+    "objectID": "code.html#redesign-3-country-impact-assessment",
+    "href": "code.html#redesign-3-country-impact-assessment",
+    "title": "R Code Implementation",
+    "section": "Redesign 3: Country Impact Assessment",
+    "text": "Redesign 3: Country Impact Assessment\n\n# Prepare country impact data\ncountry_impact &lt;- df_clean %&gt;%\n  filter(!is.na(LandfallCountry)) %&gt;%\n  group_by(LandfallCountry) %&gt;%\n  summarise(\n    total_landfalls = n(),\n    avg_intensity = mean(SSHWS, na.rm = TRUE),\n    max_intensity = max(SSHWS, na.rm = TRUE),\n    major_hurricanes = sum(SSHWS &gt;= 4, na.rm = TRUE),\n    .groups = 'drop'\n  ) %&gt;%\n  filter(total_landfalls &gt;= 3) %&gt;%  # Only countries with multiple landfalls\n  arrange(desc(total_landfalls))\n\n# Create country impact visualization\np_redesign3 &lt;- ggplot(country_impact, \n                       aes(x = total_landfalls, \n                           y = fct_reorder(LandfallCountry, total_landfalls))) +\n  geom_point(aes(size = major_hurricanes, color = avg_intensity), alpha = 0.8) +\n  geom_segment(aes(xend = 0, yend = LandfallCountry), alpha = 0.5) +\n  scale_color_viridis(name = \"Avg Category\", option = \"inferno\", \n                      limits = c(1, 5), breaks = 1:5) +\n  scale_size_continuous(name = \"Major Hurricanes\", range = c(2, 8)) +\n  labs(title = \"Redesign 3: Country Impact Analysis\",\n       subtitle = \"Position = Total landfalls, Color = Average intensity, Size = Major hurricanes (Cat 4-5)\",\n       x = \"Total Hurricane Landfalls\", y = \"Country\") +\n  theme_minimal() +\n  theme(plot.title = element_text(face = \"bold\"),\n        panel.grid.major.y = element_blank())\n\nprint(p_redesign3)\n\n\n\n\n\n\n\n# Save the visualization\nggsave(\"redesign3_country.png\", p_redesign3, width = 12, height = 8, dpi = 300)\n\n# Display top affected countries\ncat(\"Top 5 Most Affected Countries:\\n\")\n\nTop 5 Most Affected Countries:\n\ntop_countries &lt;- country_impact %&gt;% head(5)\nprint(top_countries)\n\n# A tibble: 5 × 5\n  LandfallCountry total_landfalls avg_intensity max_intensity major_hurricanes\n  &lt;chr&gt;                     &lt;int&gt;         &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;\n1 Mexico                       47          2.36             5                8\n2 Cuba                         41          2.32             5               10\n3 Bahamas                      38          2.55             5                8\n4 Canada                       11          1.18             2                0\n5 Belize                       10          1.8              4                2"
+  },
+  {
+    "objectID": "code.html#redesign-4-intensity-relationships",
+    "href": "code.html#redesign-4-intensity-relationships",
+    "title": "R Code Implementation",
+    "section": "Redesign 4: Intensity Relationships",
+    "text": "Redesign 4: Intensity Relationships\n\n# Prepare data for intensity analysis\nstorm_analysis &lt;- df_clean %&gt;%\n  filter(!is.na(MaxWinds) & !is.na(CentralPressure) & !is.na(SSHWS)) %&gt;%\n  mutate(Category = as.factor(SSHWS))\n\n# Create base scatterplot\np_redesign4_base &lt;- ggplot(storm_analysis, aes(x = CentralPressure, y = MaxWinds)) +\n  geom_point(aes(color = Category), alpha = 0.7, size = 2) +\n  geom_smooth(method = \"lm\", se = TRUE, color = \"black\", alpha = 0.3) +\n  scale_color_manual(values = c(\"1\" = \"blue\", \"2\" = \"green\", \"3\" = \"yellow\", \n                                \"4\" = \"orange\", \"5\" = \"red\")) +\n  labs(title = \"Redesign 4: Hurricane Intensity Relationships\",\n       subtitle = \"Pressure-Wind relationship with marginal distributions\",\n       x = \"Central Pressure (mb)\", y = \"Maximum Winds (knots)\") +\n  theme_minimal() +\n  theme(plot.title = element_text(face = \"bold\"))\n\n# Add marginal distributions\np_redesign4 &lt;- ggMarginal(p_redesign4_base, type = \"density\", \n                         fill = \"lightblue\", alpha = 0.7)\n\nprint(p_redesign4)\n\n\n\n\n\n\n\n# Save the visualization\nggsave(\"redesign4_intensity.png\", p_redesign4, width = 12, height = 8, dpi = 300)\n\n# Display correlation statistics\ncorrelation &lt;- cor(storm_analysis$CentralPressure, storm_analysis$MaxWinds, \n                   use = \"complete.obs\")\ncat(\"Pressure-Wind Correlation:\", round(correlation, 3), \"\\n\")\n\nPressure-Wind Correlation: -0.925"
+  },
+  {
+    "objectID": "code.html#summary-statistics",
+    "href": "code.html#summary-statistics",
+    "title": "R Code Implementation",
+    "section": "Summary Statistics",
+    "text": "Summary Statistics\n\n# Generate comprehensive summary statistics\ncat(\"=== COMPREHENSIVE DATA SUMMARY ===\\n\\n\")\n\n=== COMPREHENSIVE DATA SUMMARY ===\n\n# Basic statistics\ncat(\"DATA OVERVIEW:\\n\")\n\nDATA OVERVIEW:\n\ncat(\"Total records:\", nrow(df_clean), \"\\n\")\n\nTotal records: 232 \n\ncat(\"Date range:\", min(df_clean$Year, na.rm = TRUE), \"to\", max(df_clean$Year, na.rm = TRUE), \"\\n\")\n\nDate range: 1946 to 2023 \n\ncat(\"Countries affected:\", length(unique(na.omit(df_clean$LandfallCountry))), \"\\n\")\n\nCountries affected: 33 \n\ncat(\"Unique storm names:\", length(unique(na.omit(df_clean$StormName))), \"\\n\\n\")\n\nUnique storm names: 108 \n\n# Intensity distribution\ncat(\"INTENSITY DISTRIBUTION:\\n\")\n\nINTENSITY DISTRIBUTION:\n\nintensity_summary &lt;- df_clean %&gt;%\n  filter(!is.na(SSHWS)) %&gt;%\n  group_by(SSHWS) %&gt;%\n  summarise(\n    Count = n(),\n    Percentage = round(n() / nrow(df_clean) * 100, 1),\n    Avg_MaxWinds = round(mean(MaxWinds, na.rm = TRUE), 1),\n    Avg_Pressure = round(mean(CentralPressure, na.rm = TRUE), 1),\n    .groups = 'drop'\n  )\nprint(intensity_summary)\n\n# A tibble: 5 × 5\n  SSHWS Count Percentage Avg_MaxWinds Avg_Pressure\n  &lt;dbl&gt; &lt;int&gt;      &lt;dbl&gt;        &lt;dbl&gt;        &lt;dbl&gt;\n1     1    93       40.1         71.6         983.\n2     2    41       17.7         89.1         967.\n3     3    52       22.4        106.          955.\n4     4    32       13.8        123           939.\n5     5    14        6          148.          916.\n\ncat(\"\\n\")\n# Most active years\ncat(\"TOP 5 MOST ACTIVE YEARS:\\n\")\n\nTOP 5 MOST ACTIVE YEARS:\n\nactive_years &lt;- df_clean %&gt;%\n  group_by(Year) %&gt;%\n  summarise(Landfalls = n(), .groups = 'drop') %&gt;%\n  arrange(desc(Landfalls)) %&gt;%\n  head(5)\nprint(active_years)\n\n# A tibble: 5 × 2\n   Year Landfalls\n  &lt;dbl&gt;     &lt;int&gt;\n1  1955        10\n2  2005         9\n3  2008         9\n4  2017         9\n5  2020         9\n\ncat(\"\\n\")\n# Country statistics\ncat(\"COUNTRY IMPACT SUMMARY:\\n\")\n\nCOUNTRY IMPACT SUMMARY:\n\ncountry_stats &lt;- df_clean %&gt;%\n  filter(!is.na(LandfallCountry)) %&gt;%\n  group_by(LandfallCountry) %&gt;%\n  summarise(\n    Landfalls = n(),\n    Major_Hurricanes = sum(SSHWS &gt;= 4, na.rm = TRUE),\n    Avg_Category = round(mean(SSHWS, na.rm = TRUE), 2),\n    .groups = 'drop'\n  ) %&gt;%\n  arrange(desc(Landfalls)) %&gt;%\n  head(10)\nprint(country_stats)\n\n# A tibble: 10 × 4\n   LandfallCountry Landfalls Major_Hurricanes Avg_Category\n   &lt;chr&gt;               &lt;int&gt;            &lt;int&gt;        &lt;dbl&gt;\n 1 Mexico                 47                8         2.36\n 2 Cuba                   41               10         2.32\n 3 Bahamas                38                8         2.55\n 4 Canada                 11                0         1.18\n 5 Belize                 10                2         1.8 \n 6 Nicaragua               9                4         2.78\n 7 Haiti                   8                3         2.88\n 8 Bermuda                 6                0         1.67\n 9 Puerto Rico             6                1         2.5 \n10 Barbuda                 5                1         2.6 \n\ncat(\"\\n=== ANALYSIS COMPLETE ===\\n\")\n\n\n=== ANALYSIS COMPLETE ==="
+  },
+  {
+    "objectID": "code.html#package-dependencies",
+    "href": "code.html#package-dependencies",
+    "title": "R Code Implementation",
+    "section": "Package Dependencies",
+    "text": "Package Dependencies\n\nggplot2: Primary visualization system\ndplyr: Data manipulation and transformation\nlubridate: Date handling and processing\nmaps: Geographic map data\nviridis: Color-blind friendly color schemes\nggExtra: Marginal distribution plots\ngridExtra: Multi-plot arrangements\ntidyr: Data tidying functions"
+  },
+  {
+    "objectID": "code.html#code-structure",
+    "href": "code.html#code-structure",
+    "title": "R Code Implementation",
+    "section": "Code Structure",
+    "text": "Code Structure\n\nData Import & Cleaning: Reading CSV, handling missing values, date correction\nData Transformation: Creating derived variables, grouping, summarization\nVisualization Creation: Four distinct redesigns using ggplot2\nStatistical Analysis: Correlation, distributions, and summary statistics\nOutput Generation: Saving high-quality PNG files\n\nNote: This code requires the Intl_HurrData.csv file to be in the working directory."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Hurricane Landfall Visualization Redesign",
+    "section": "",
+    "text": "This project redesigns NOAA’s International Atlantic Hurricane Landfalls data table (1946-2023) to demonstrate effective data visualization principles for STAT 515.\n\n\n\nTemporal Trends\n\n\n\n\n\nOriginal Visualization: NOAA hurricane landfall data table\n4 Redesigns: Temporal, spatial, categorical, and relational analyses\nTools: R, ggplot2, Quarto\nCourse: STAT 515 - Applied Statistics and Visualization for Analytics\n\n\n\n\n\nRedesign Analysis: Detailed breakdown of all visualizations\nR Code: Complete implementation code\nVideo Presentation: 10-minute project overview"
+  },
+  {
+    "objectID": "index.html#project-overview",
+    "href": "index.html#project-overview",
+    "title": "Hurricane Landfall Visualization Redesign",
+    "section": "",
+    "text": "This project redesigns NOAA’s International Atlantic Hurricane Landfalls data table (1946-2023) to demonstrate effective data visualization principles for STAT 515.\n\n\n\nTemporal Trends\n\n\n\n\n\nOriginal Visualization: NOAA hurricane landfall data table\n4 Redesigns: Temporal, spatial, categorical, and relational analyses\nTools: R, ggplot2, Quarto\nCourse: STAT 515 - Applied Statistics and Visualization for Analytics\n\n\n\n\n\nRedesign Analysis: Detailed breakdown of all visualizations\nR Code: Complete implementation code\nVideo Presentation: 10-minute project overview"
+  }
+]
