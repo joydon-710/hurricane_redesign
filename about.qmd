@@ -8,23 +8,22 @@ title: "About This Project"
 **Institution**: George Mason University\
 **Date**: Fall 2025
 
-## Data Source
+## References
 
-NOAA International Best Track Archive for Climate Stewardship (IBTrACS)\
-International Atlantic Hurricane Landfalls, 1946-2023
+### Data Source
 
-## Tools & Technologies
+National Oceanic and Atmospheric Administration. (2024). *International Best Track Archive for Climate Stewardship (IBTrACS): Atlantic hurricane landfalls, 1946-2023*. NOAA Atlantic Oceanographic and Meteorological Laboratory. <https://www.aoml.noaa.gov/hrd/hurdat/International_Hurricanes.html>
 
--   **R**: Data analysis and visualization
--   **ggplot2**: Statistical graphics
--   **Quarto**: Website generation
--   **GitHub**: Version control and hosting
+### Software & Packages
 
-## Design Principles Applied
+R Core Team. (2023). *R: A language and environment for statistical computing*. R Foundation for Statistical Computing. <https://www.R-project.org/>
 
-1.  Enable accurate comparisons
-2.  Simplify appearance
-3.  Provide context for interpretation
-4.  Attract and engage the reader
+Wickham, H. (2016). *ggplot2: Elegant graphics for data analysis*. Springer-Verlag New York. <https://ggplot2.tidyverse.org>
 
-## 
+Wickham, H., François, R., Henry, L., Müller, K., & Vaughan, D. (2023). *dplyr: A grammar of data manipulation*. <https://dplyr.tidyverse.org>
+
+Allaire, J., Xie, Y., Dervieux, C., McPherson, J., Luraschi, J., Ushey, K., ... & Iannone, R. (2023). *quarto: R package for scientific and technical publishing*. <https://quarto.org>
+
+### Design Guidelines
+
+Based on principles from STAT 515: Applied Statistics and Visualization for Analytics course materials.
