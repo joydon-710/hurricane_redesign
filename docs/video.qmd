@@ -1,0 +1,71 @@
+---
+title: "Video"
+format: html
+---
+
+# Video Presentation
+
+## Hurricane Landfall Visualization Redesign
+
+### STAT 515 Redesign Project - International Hurricane Landfalls (1946-2023)
+
+------------------------------------------------------------------------
+
+## Watch the Presentation
+
+:::: {style="text-align: center; margin: 40px 0;"}
+::: {style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 800px; margin: 0 auto;"}
+<iframe src="https://www.youtube.com/embed/YOUR_VIDEO_ID_HERE" 
+          style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; border-radius: 8px;" 
+          allowfullscreen 
+          title="Hurricane Landfall Visualization Redesign Presentation"> </iframe>
+:::
+::::
+
+------------------------------------------------------------------------
+
+## Presentation Overview
+
+### 📊 Project Introduction
+
+-   **Problem**: Understanding long-term patterns in international hurricane landfalls
+-   **Data**: NOAA International Hurricane Data (1946-2023)
+-   **Goal**: Redesign visualizations for better insight and communication
+
+### 🔍 Key Visualizations
+
+**1. Temporal Trends Analysis** - LOESS smoothing reveals long-term patterns - Highlights different data collection periods - Shows hurricane frequency over time
+
+**2. Enhanced Spatial Mapping** - Geographic distribution of landfalls - Point size = Maximum wind speed - Color coding = Saffir-Simpson category
+
+**3. Country Impact Assessment** - Multi-dimensional bubble chart - Position = Total landfalls - Color = Average intensity\
+- Size = Major hurricanes (Category 4-5)
+
+**4. Intensity Relationships** - Wind speed vs central pressure correlation - Physical relationships in hurricane intensity - Category-based analysis
+
+### 🎯 Key Findings
+
+-   Identification of hurricane frequency patterns over time
+-   Geographic hotspots and regional vulnerabilities
+-   Country-level impact assessment
+-   Intensity relationship insights
+
+### 💻 Technical Implementation
+
+-   **Tools**: R, ggplot2, Quarto
+-   **Methods**: Statistical visualization, LOESS smoothing, spatial analysis
+-   **Output**: Reproducible research website
+
+------------------------------------------------------------------------
+
+## Project Resources
+
+**Data Source**: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)
+
+**Code Repository**: \[GitHub Repository Link\]
+
+**Full Analysis**: See the "Redesign Analysis" page for detailed visualizations
+
+------------------------------------------------------------------------
+
+## 

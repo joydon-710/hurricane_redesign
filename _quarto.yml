@@ -1,5 +1,6 @@
 project:
   type: website
+  output-dir: docs
 
 website:
   title: "Hurricane Landfall Visualization Redesign"
@@ -12,7 +13,7 @@ website:
         text: Redesign Analysis
       - href: code.qmd
         text: R Code
-      - href: video.qmd
+      - href: Video.qmd
         text: Video Presentation
       - href: about.qmd
         text: About
