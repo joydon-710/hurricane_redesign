@@ -61,7 +61,7 @@ format: html
 
 **Data Source**: NOAA International Best Track Archive for Climate Stewardship (IBTrACS)
 
-**Code Repository**: \[GitHub Repository Link\]
+**Code Repository**: <https://github.com/joydon-710/hurricane_redesign>
 
 **Full Analysis**: See the "Redesign Analysis" page for detailed visualizations
 
